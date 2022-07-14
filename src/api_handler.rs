@@ -423,8 +423,8 @@ fn parse_auctions(
                     uuid: uuid.to_string(),
                     auctioneer,
                     end_t: auction.get("end").unwrap().as_i64().unwrap(),
-                    item_name: item_name
-                    item_lore: MC_CODE_REGEX.replace_all(item_lore.split('\n').next().unwrap_or(""), "").to_string()
+                    item_name: item_name,
+                    item_lore: MC_CODE_REGEX.replace_all(item_lore.split('\n').next().unwrap_or(""), "").to_string(),
                     tier: tier.to_string(),
                     starting_bid,
                     item_id: id.to_string(),
