@@ -291,7 +291,7 @@ pub async fn update_avg_ah_database(avg_ah_prices: Vec<AvgAh>, time_t: i64) -> R
         .simple_query(
             &format!(
                 "DELETE FROM average WHERE time_t < {}",
-                (Utc::now() - chrono::Duration::days(5)).timestamp_millis()
+                (Utc::now() - chrono::Duration::days(30)).timestamp_millis()
             )
             .to_string(),
         )
